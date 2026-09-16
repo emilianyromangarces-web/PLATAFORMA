@@ -3,66 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I.E. Manuel María Mosquera</title>
+<title>Institución Educativa Manuel María Mosquera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="fondo"></div>
+<a class="salto" href="#contenido">Ir al contenido</a>
 
-<header class="header">
-    <img src="logo.png" class="logo">
-    <h1>Institución Educativa Manuel María Mosquera</h1>
-    <p>¡Bienvenid@!</p>
+<header class="cabecera">
+    <div class="cabecera__fila">
+        <a class="marca" href="#top">
+            <img src="logo.png" alt="Escudo de la Institución Educativa Manuel María Mosquera" class="marca__logo">
+            <span class="marca__texto">
+                <strong>I.E. Manuel María Mosquera</strong>
+                <small>Canal estudiantil Impulso Educativo</small>
+            </span>
+        </a>
 
-    <div class="menu">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle">⋮</label>
+        <nav class="nav" aria-label="Navegación principal">
+            <input type="checkbox" id="menu-toggle" class="nav__control">
+            <label for="menu-toggle" class="nav__boton" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </label>
 
-        <div class="menu-content">
-            <a href="#multimedia">PDF y Video</a>
-            <a href="#info">Información</a>
-        </div>
+            <div class="nav__lista">
+                <a href="#multimedia">PDF y video</a>
+                <a href="#info">Información</a>
+            </div>
+        </nav>
     </div>
 </header>
 
-<main>
-
-<section id="multimedia" class="card">
-    <h2>Contenido Multimedia</h2>
-
-    <div class="contenedor">
-
-        <div class="bloque">
-            <div class="glass">PDF</div>
-            <iframe src="info.pdf"></iframe>
-        </div>
-
-        <div class="bloque">
-            <div class="glass">Video</div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/pocX6Jk2UXI" allowfullscreen></iframe>
-            </div>
-        </div>
-
-    </div>
+<section class="bienvenida">
+    <h1>Bienvenid@ a nuestra comunidad educativa</h1>
+    <p>Un espacio para conocer, aprender y crecer junto a la institución.</p>
 </section>
 
-<section id="info" class="card">
-    <h2>Consejos</h2>
-    <p>
-        Mantén disciplina, respeto y responsabilidad. 
-        Aprovecha la tecnología para aprender mejor y crecer académicamente.
-    </p>
-</section>
+<main id="contenido">
+
+    <section id="multimedia" class="seccion">
+        <div class="seccion__encabezado">
+            <h2>Contenido multimedia</h2>
+            <p>Consulta el documento institucional y el video del proyecto Impulso Educativo.</p>
+        </div>
+
+        <div class="rejilla">
+
+            <article class="hoja hoja--visor">
+                <header class="hoja__cabecera">
+                    <h3>Documento institucional</h3>
+                    <a class="enlace-discreto" href="info.pdf" target="_blank" rel="noopener">
+                        Abrir en una pestaña nueva ↗
+                    </a>
+                </header>
+                <div class="visor-pdf">
+                    <object data="info.pdf" type="application/pdf">
+                        <div class="visor-pdf__reserva">
+                            <p>Tu navegador no puede mostrar el PDF aquí.</p>
+                            <a class="boton" href="info.pdf" target="_blank" rel="noopener">Ver documento</a>
+                        </div>
+                    </object>
+                </div>
+            </article>
+
+            <article class="hoja">
+                <header class="hoja__cabecera">
+                    <h3>Video del proyecto</h3>
+                </header>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/pocX6Jk2UXI"
+                        title="Video del canal Impulso Educativo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="info" class="seccion">
+        <div class="seccion__encabezado">
+            <h2>Consejos</h2>
+        </div>
+
+        <blockquote class="cita">
+            <p>Mantén disciplina, respeto y responsabilidad. Aprovecha la tecnología para aprender mejor y crecer académicamente.</p>
+        </blockquote>
+    </section>
 
 </main>
 
-<footer>
-    <p>© 2026 - Grupo</p>
-    <a href="https://iemmmrip.edu.co/index.php" target="_blank">
-        Volver a la página principal
-    </a>
+<footer class="pie">
+    <p>© 2026 Grupo de Emiliany — Proyecto Impulso Educativo</p>
+    <a href="https://iemmmrip.edu.co/index.php" target="_blank" rel="noopener">Volver a la página principal</a>
 </footer>
 
 </body>
